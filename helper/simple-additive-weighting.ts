@@ -25,11 +25,11 @@ function count(arr: any) {
   for (let i = 0; i < hasil[0].length; i++) {
     real = 0;
     for (let j = 0; j < hasil.length; j++) {
-      if (j === 0) {
-        real = real - hasil[j][i] * percent[j];
-      } else {
-        real = real + hasil[j][i] * percent[j];
-      }
+      // if (j === 0) {
+      //   real = real - hasil[j][i] * percent[j];
+      // } else {
+      real = real + hasil[j][i] * percent[j];
+      // }
     }
     if (real < 0) {
       real = 0;

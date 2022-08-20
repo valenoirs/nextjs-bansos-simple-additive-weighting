@@ -49,7 +49,7 @@ const pengeluaran: IOption[] = [
 const Home: NextPage = () => {
   const [formValue, setFormValue] = useState<any>([
     {
-      nama: "Orang",
+      nama: "Nama",
       tempatTinggal: 1,
       pekerjaan: 1,
       tanggungan: 1,
@@ -80,7 +80,7 @@ const Home: NextPage = () => {
     setFormValue([
       ...formValue,
       {
-        nama: "Orang",
+        nama: "Nama",
         tempatTinggal: 1,
         pekerjaan: 1,
         tanggungan: 1,
@@ -127,8 +127,8 @@ const Home: NextPage = () => {
                       type="text"
                       className="input w-[15rem] max-w-xs"
                       name="nama"
-                      placeholder="Orang"
-                      defaultValue={"Orang"}
+                      placeholder="Nama"
+                      defaultValue={"Nama"}
                       onChange={(e) => handleChange(index, e)}
                     />
                   </label>
