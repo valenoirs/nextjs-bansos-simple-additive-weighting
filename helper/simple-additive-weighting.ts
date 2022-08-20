@@ -3,11 +3,9 @@ const percent = [30, 40, 10, 10, 10];
 function count(arr: any) {
   let hasil: any[] = [];
 
-  console.log(arr);
-
   arr.forEach((element: any, index: any) => {
     index++;
-    console.log(arr[index]);
+
     if (index === 6) {
       return;
     }
@@ -39,9 +37,6 @@ function count(arr: any) {
     output.push({ name: arr[0][i], score: Math.round(real) });
   }
 
-  console.log(hasil);
-  console.log(output);
-
   return output.sort((a, b) => {
     return b.score - a.score;
   });
@@ -55,8 +50,6 @@ export default function processArray(arr: any) {
   });
 
   const output = count(result);
-
-  console.log(output);
 
   return output;
 }

@@ -92,6 +92,7 @@ const Home: NextPage = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+
     let sawCalculate = saw(formValue);
 
     setSawValue(sawCalculate);
