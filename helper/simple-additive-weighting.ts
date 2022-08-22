@@ -10,7 +10,7 @@ function count(arr: any) {
       return;
     }
 
-    if (index === 1 || index === 2 || index === 4) {
+    if (index === 1 || index === 2 || index === 4 || index === 5) {
       let min = Math.min(...arr[index]);
       hasil.push(arr[index].map((e: any) => min / e));
     } else {
@@ -34,7 +34,8 @@ function count(arr: any) {
     if (real < 0) {
       real = 0;
     }
-    output.push({ name: arr[0][i], score: Math.round(real) });
+    // output.push({ name: arr[0][i], score: Math.round(real) });
+    output.push({ name: arr[0][i], score: real });
   }
 
   return output.sort((a, b) => {

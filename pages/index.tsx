@@ -7,27 +7,27 @@ import { IOption } from "../interface/IOption";
 import saw from "../helper/simple-additive-weighting";
 
 const tempatTinggal: IOption[] = [
-  { value: 1, label: "Milik Sendiri" },
-  { value: 2, label: "Milik Orang Tua" },
-  { value: 3, label: "Kos" },
-  { value: 4, label: "Kontrak" },
-  { value: 5, label: "Tidak Ada" },
+  { value: 5, label: "Milik Sendiri" },
+  { value: 4, label: "Milik Keluarga" },
+  { value: 3, label: "Milik Pemerintah" },
+  { value: 2, label: "Kos" },
+  { value: 1, label: "Kontrak" },
 ];
 
 const pekerjaan: IOption[] = [
-  { value: 1, label: "Wiraswasta" },
-  { value: 2, label: "Petani" },
-  { value: 3, label: "Pedagang" },
-  { value: 4, label: "Buruh" },
-  { value: 5, label: "Tidak Bekerja" },
+  { value: 5, label: "Wiraswasta" },
+  { value: 4, label: "Pedagang" },
+  { value: 3, label: "Petani" },
+  { value: 2, label: "Buruh" },
+  { value: 1, label: "Tidak Bekerja" },
 ];
 
 const tanggungan: IOption[] = [
-  { value: 1, label: "Tidak Ada" },
-  { value: 2, label: "1 / 2 orang" },
+  { value: 5, label: "Tidak Ada" },
+  { value: 4, label: "1 / 2 orang" },
   { value: 3, label: "3 / 4 orang" },
-  { value: 4, label: "5 / 6 orang" },
-  { value: 5, label: "Lebih dari 6 orang" },
+  { value: 2, label: "5 / 6 orang" },
+  { value: 1, label: "Lebih dari 6 orang" },
 ];
 
 const pendapatan: IOption[] = [
@@ -39,22 +39,22 @@ const pendapatan: IOption[] = [
 ];
 
 const pengeluaran: IOption[] = [
-  { value: 1, label: "<Rp. 1.000.000" },
-  { value: 2, label: "Rp. 1.000.000 - Rp. 3.000.000" },
+  { value: 5, label: "<Rp. 1.000.000" },
+  { value: 4, label: "Rp. 1.000.000 - Rp. 3.000.000" },
   { value: 3, label: "Rp. 3.000.000 - Rp. 4.000.000" },
-  { value: 4, label: "Rp. 4.000.000 - Rp. 5.000.000" },
-  { value: 5, label: ">Rp. 5.000.000" },
+  { value: 2, label: "Rp. 4.000.000 - Rp. 5.000.000" },
+  { value: 1, label: ">Rp. 5.000.000" },
 ];
 
 const Home: NextPage = () => {
   const [formValue, setFormValue] = useState<any>([
     {
       nama: "Nama",
-      tempatTinggal: 1,
-      pekerjaan: 1,
-      tanggungan: 1,
+      tempatTinggal: 5,
+      pekerjaan: 5,
+      tanggungan: 5,
       pendapatan: 1,
-      pengeluaran: 1,
+      pengeluaran: 5,
     },
   ]);
 
@@ -81,11 +81,11 @@ const Home: NextPage = () => {
       ...formValue,
       {
         nama: "Nama",
-        tempatTinggal: 1,
-        pekerjaan: 1,
-        tanggungan: 1,
+        tempatTinggal: 5,
+        pekerjaan: 5,
+        tanggungan: 5,
         pendapatan: 1,
-        pengeluaran: 1,
+        pengeluaran: 5,
       },
     ]);
   };
@@ -236,7 +236,7 @@ const Home: NextPage = () => {
                 <table className="table w-full">
                   <thead>
                     <tr>
-                      <th></th>
+                      <th>Peringkat</th>
                       <th>Nama</th>
                       <th>Score</th>
                     </tr>
