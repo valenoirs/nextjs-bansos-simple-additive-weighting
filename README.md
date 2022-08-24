@@ -9,6 +9,7 @@
 - React
 - Next
 - Vercel
+- Simple Additive Weighting
 - more...
 
 ---
